@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Lover - Insumos Veterinarios y Accesorios</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+</head>
+<body>
+
+    <div class="top-bar">
+        ¡Envíos gratis por compras sobre $30.000! 🐾
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">PetLover</div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Todo para tu mejor amigo</h1>
+            <p>Insumos para tu mascotas de la más alta calidad.</p>
+            <button class="btn-main">Ver Catálogo</button>
+        </div>
+    </header>
+
+    <section id="productos" class="products-section">
+        <h2>Nuestros Productos</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="carousel">
+                    <img src="https://via.placeholder.com/250x200?text=Alimento+Premium" alt="Alimento Premium Perro">
+                </div>
+                <h3>Alimento Premium Perro</h3>
+                <p class="price">$25.990</p>
+                <button class="add-to-cart" onclick="addToCart('Alimento Premium', 25990)">Agregar al carro</button>
+            </div>
+            <div class="product-card">
+                <div class="carousel">
+                    <img src="https://via.placeholder.com/250x200?text=Antiparasitario" alt="Antiparasitario Externo">
+                </div>
+                <h3>Antiparasitario Externo</h3>
+                <p class="price">$12.500</p>
+                <button class="add-to-cart" onclick="addToCart('Antiparasitario', 12500)">Agregar al carro</button>
+            </div>
+            <div class="product-card">
+                <div class="carousel">
+                    <img src="https://via.placeholder.com/250x200?text=Collar+Reflectivo" alt="Collar Reflectivo">
+                </div>
+                <h3>Collar Reflectivo</h3>
+                <p class="price">$8.990</p>
+                <button class="add-to-cart" onclick="addToCart('Collar Reflectivo', 8990)">Agregar al carro</button>
+            </div>
+            <div class="product-card">
+                <div class="carousel">
+                    <img src="https://via.placeholder.com/250x200?text=Juguete+Interactivo" alt="Juguete Interactivo">
+                </div>
+                <h3>Juguete Interactivo</h3>
+                <p class="price">$15.500</p>
+                <button class="add-to-cart" onclick="addToCart('Juguete Interactivo', 15500)">Agregar al carro</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <button class="close-cart" onclick="toggleCart()">×</button>
+        <h2>Tu Carrito</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <strong>Total: $<span id="cart-total">0</span></strong>
+        </div>
+        <button id="btn-checkout" class="btn-checkout">Finalizar Compra</button>
+    </div>
+
+    <a href="https://wa.me/123456789" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer id="contacto">
+        <div class="footer-container">
+            <div class="info">
+                <h4>Dirección</h4>
+                <p>Av. Ratón Peréz 323, Distrito Tundratown. Zootopia</p>
+                <h4>Horarios</h4>
+                <p>Lun - Vie: 09:00 - 19:00</p>
+            </div>
+            <div class="socials">
+                <h4>Síguenos</h4>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13317.553951554602!2d-70.6504502!3d-33.4372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1625612345678!5m2!1ses!2scl" width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <button id="back-to-top" onclick="scrollToTop()">↑ Volver arriba</button>
+    </footer>
+
+    <div id="toast" class="toast">¡Producto añadido con éxito!</div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
