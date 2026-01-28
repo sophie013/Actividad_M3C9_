@@ -1,0 +1,55 @@
+// ============================================================
+// MAIN.SCSS - ARCHIVO PRINCIPAL
+// Importa todos los componentes y estilos del proyecto
+// ============================================================
+
+// 1. ABSTRACCIONES (Variables y Mixins)
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. BASE (Reset y estilos base)
+@import 'base/resets';
+
+// 3. COMPONENTES
+@import 'components/topbar';
+@import 'components/navbar';
+@import 'components/hero';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/cart';
+@import 'components/utils';
+@import 'components/back-to-top';
+@import 'components/footer';
+
+// ============================================================
+// ESTILOS ADICIONALES Y AJUSTES
+// ============================================================
+
+// Scroll suave en toda la página
+html {
+  scroll-behavior: smooth;
+}
+
+// Asegurar que los elementos tengan altura mínima
+main {
+  min-height: calc(100vh - 200px);
+}
+
+// Mejorar la accesibilidad
+:focus {
+  outline: 2px solid $accent-color;
+  outline-offset: 2px;
+}
+
+// Estilos para inputs y formularios (si es necesario agregar)
+input, textarea, select {
+  font-family: $font-family;
+  border: 1px solid $border-color;
+  padding: 10px;
+  border-radius: 5px;
+  @include smooth-transition(border-color);
+
+  &:focus {
+    border-color: $accent-color;
+  }
+}

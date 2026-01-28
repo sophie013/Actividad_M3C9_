@@ -1,0 +1,28 @@
+.testimonios {
+  padding: 80px 5%;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+
+  .testimonio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .testimonio-card {
+    background: rgb(2, 55, 60);
+    padding: 30px;
+    border-radius: 15px;
+   
+    font-style: italic;
+    
+    .user-name {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: $primary-color;
+      font-style: normal;
+    }
+  }
+}

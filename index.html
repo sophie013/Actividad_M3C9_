@@ -11,7 +11,7 @@
 <body>
 
     <div class="top-bar">
-        ¡Envíos gratis por compras sobre $30.000! 🐾
+        <span class="marquee-text">¡Envíos gratis por compras sobre $30.000! 🐾</span>
     </div>
 
     <nav class="navbar">
@@ -27,44 +27,44 @@
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Todo para tu mejor amigo</h1>
-            <p>Insumos para tu mascotas de la más alta calidad.</p>
-            <button class="btn-main">Ver Catálogo</button>
-        </div>
-    </header>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Todo para tu mejor amigo</h1>
+        <p>Insumos para tu mascota de la más alta calidad</p>
+        <a href="#productos" class="btn-main">Ver Catálogo</a>
+      </div>
+    </section>
 
     <section id="productos" class="products-section">
-        <h2>Nuestros Productos</h2>
+        <h2>Nuestros Productos mas buscados </h2>
         <div class="product-grid">
             <div class="product-card">
                 <div class="carousel">
-                    <img src="https://via.placeholder.com/250x200?text=Alimento+Premium" alt="Alimento Premium Perro">
+                    <img src="https://www.amigales.cl/media/catalog/product/cache/629713204090c0e7213f3f646f843e1a/b/r/bravery_dog_senior_2.jpg" alt="Alimento Premium Perro">
                 </div>
-                <h3>Alimento Premium Perro</h3>
+                <h3>Alimento Premium Perro bravery 4.kg </h3>
                 <p class="price">$25.990</p>
                 <button class="add-to-cart" onclick="addToCart('Alimento Premium', 25990)">Agregar al carro</button>
             </div>
             <div class="product-card">
                 <div class="carousel">
-                    <img src="https://via.placeholder.com/250x200?text=Antiparasitario" alt="Antiparasitario Externo">
+                    <img src="https://dojiw2m9tvv09.cloudfront.net/30336/product/X_simparica-trio-5-a-10-kg-1-comp-para-perros9648.jpg?105&t=1769622375" alt="Antiparasitario Externo">
                 </div>
-                <h3>Antiparasitario Externo</h3>
-                <p class="price">$12.500</p>
+                <h3>Antiparasitario Externo SIMPARICA TRÍO - 5 A 10 KG</h3>
+                <p class="price">$7.990</p>
                 <button class="add-to-cart" onclick="addToCart('Antiparasitario', 12500)">Agregar al carro</button>
             </div>
             <div class="product-card">
                 <div class="carousel">
-                    <img src="https://via.placeholder.com/250x200?text=Collar+Reflectivo" alt="Collar Reflectivo">
+                    <img src="https://cdnx.jumpseller.com/cody-store/image/26946821/resize/640/500?1662654305" alt="Collar Reflectivo">
                 </div>
-                <h3>Collar Reflectivo</h3>
+                <h3>Collar reflectivo led Carga Usb universal </h3>
                 <p class="price">$8.990</p>
                 <button class="add-to-cart" onclick="addToCart('Collar Reflectivo', 8990)">Agregar al carro</button>
             </div>
             <div class="product-card">
                 <div class="carousel">
-                    <img src="https://via.placeholder.com/250x200?text=Juguete+Interactivo" alt="Juguete Interactivo">
+                    <img src="https://www.amigales.cl/media/catalog/product/cache/5a453bbcf6069c8289aeb5e805e7ef39/d/o/dog_brick_1.jpg" alt="Juguete Interactivo">
                 </div>
                 <h3>Juguete Interactivo</h3>
                 <p class="price">$15.500</p>
@@ -74,7 +74,9 @@
     </section>
 
     <div id="cart-sidebar" class="cart-sidebar">
-        <button class="close-cart" onclick="toggleCart()">×</button>
+        <button class="close-cart" onclick="toggleCart()" title="Cerrar carrito">
+            <i class="fas fa-times"></i>
+        </button>
         <h2>Tu Carrito</h2>
         <div id="cart-items"></div>
         <div class="cart-total">
@@ -86,6 +88,31 @@
     <a href="https://wa.me/123456789" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+
+    <section class="testimonios">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonio-grid">
+        <div class="testimonio-card">
+            <p>"La mejor atención para mi perrito, los productos llegaron muy rápido."</p>
+            <span class="user-name">- Juan Pérez</span>
+        </div>
+        <div class="testimonio-card">
+            <p>"Excelente calidad en el alimento Bravery, 100% recomendado."</p>
+            <span class="user-name">- María G.</span>
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="contacto-section">
+    <h2 style="text-align: center; margin-bottom: 30px;">Contáctanos</h2>
+    <form id="contact-form">
+        <input type="text" placeholder="Tu Nombre" required>
+        <input type="email" placeholder="Tu Correo" required>
+        <textarea rows="5" placeholder="¿En qué podemos ayudarte?"></textarea>
+        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+    </form>
+</section>
 
     <footer id="contacto">
         <div class="footer-container">
@@ -104,7 +131,9 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13317.553951554602!2d-70.6504502!3d-33.4372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1625612345678!5m2!1ses!2scl" width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
-        <button id="back-to-top" onclick="scrollToTop()">↑ Volver arriba</button>
+        <button id="back-to-top" onclick="scrollToTop()" title="Volver arriba">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     </footer>
 
     <div id="toast" class="toast">¡Producto añadido con éxito!</div>

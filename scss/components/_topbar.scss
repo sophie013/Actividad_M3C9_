@@ -1,0 +1,31 @@
+// ============================================================
+// TOP BAR
+// ============================================================
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.top-bar {
+  background: $primary-color;
+  color: $white;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  overflow: hidden;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-text {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}

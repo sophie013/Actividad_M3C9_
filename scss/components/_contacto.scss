@@ -1,0 +1,28 @@
+.contacto-section {
+  padding: 80px 5%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  form {
+    display: grid;
+    gap: 15px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: $shadow-light;
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid #ddd;
+      padding: 12px;
+      border-radius: 8px;
+    }
+    
+    .btn-submit {
+       @extend .btn-main; // Reutiliza tu estilo de botón
+       border: none;
+       width: 100%;
+    }
+  }
+}
+

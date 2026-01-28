@@ -1,0 +1,63 @@
+// ============================================================
+// NAVBAR / NAVEGACIÓN
+// ============================================================
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba($white, 0.98);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: $shadow-light;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  a {
+    color: $primary-color;
+    font-weight: 600;
+    @include smooth-transition(color);
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: $primary-color;
+  @include smooth-transition(color);
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: $accent-color;
+  color: $white;
+  font-size: 0.8rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  @include flex-center;
+  font-weight: bold;
+}

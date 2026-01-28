@@ -1,0 +1,110 @@
+// ============================================================
+// BOTONES
+// ============================================================
+
+.btn-main {
+  background: $accent-color;
+  color: $white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  @include smooth-transition(background);
+
+  &:hover {
+    background: darken($accent-color, 10%);
+  }
+}
+
+.add-to-cart {
+  background: $accent-color;
+  color: $white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 100%;
+  @include smooth-transition(background);
+
+  &:hover {
+    background: darken($accent-color, 10%);
+  }
+}
+
+.btn-checkout {
+  background: $primary-color;
+  color: $white;
+  padding: 12px;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: 600;
+  margin-top: 15px;
+  @include smooth-transition(background);
+
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
+}
+
+.close-cart {
+  background: #dc3545;
+  color: $white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  position: fixed;
+  top: 35px;
+  right: 35px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: none;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+
+  &:hover {
+    background: darken(#dc3545, 10%);
+    transform: scale(1.15);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+// Mostrar el botón close-cart solo cuando el carrito está abierto
+.cart-sidebar.active .close-cart {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn-remove-item {
+  background: #e74c3c;
+  color: $white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  @include flex-center;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+  line-height: 1;
+
+  &:hover {
+    background: darken(#8a01b4, 10%);
+    transform: scale(1.15);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

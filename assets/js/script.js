@@ -1,4 +1,7 @@
-// Variables globales
+// ============================================================
+// VARIABLES GLOBALES Y FUNCIONALIDAD DEL CARRITO
+// ============================================================
+
 let cartCount = 0;
 let cartItems = [];
 let cartTotal = 0;
@@ -10,6 +13,10 @@ const productPrices = {
     'Collar Reflectivo': 8990,
     'Juguete Interactivo': 15500
 };
+
+// ============================================================
+// FUNCIONES DEL CARRITO
+// ============================================================
 
 // Función para mostrar/ocultar carrito
 function toggleCart() {
@@ -32,8 +39,6 @@ function addToCart(productName, price) {
     
     updateCartDisplay();
     showToast(`¡${productName} agregado al carrito!`);
-    
-    // NO cerrar el carrito automáticamente
 }
 
 // Actualizar visualización del carrito
@@ -83,7 +88,6 @@ function updateCartDisplay() {
 
 // Eliminar item del carrito
 function removeFromCart(itemName, event) {
-    // Prevenir que el click cierre el carrito
     if (event) {
         event.stopPropagation();
     }
@@ -102,10 +106,12 @@ function removeFromCart(itemName, event) {
         
         updateCartDisplay();
         showToast(`${itemName} eliminado del carrito`);
-        
-        // El carrito se mantiene abierto
     }
 }
+
+// ============================================================
+// FUNCIONES DE NOTIFICACIÓN
+// ============================================================
 
 // Mostrar notificación Toast
 function showToast(message) {
@@ -119,7 +125,10 @@ function showToast(message) {
     }, 3000);
 }
 
-// Botón de retorno al inicio - mostrar/ocultar según scroll
+// ============================================================
+// BOTÓN DE RETORNO AL INICIO
+// ============================================================
+
 window.addEventListener('scroll', function() {
     const btn = document.getElementById("back-to-top");
     if (!btn) return;
@@ -141,6 +150,10 @@ function scrollToTop() {
     });
 }
 
+// ============================================================
+// MANEJO DE EVENTOS DEL CARRITO
+// ============================================================
+
 // Cerrar carrito al hacer clic en el fondo
 document.addEventListener('click', function(event) {
     const cartSidebar = document.getElementById('cart-sidebar');
@@ -160,17 +173,13 @@ document.addEventListener('DOMContentLoaded', function() {
         checkoutBtn.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Validar que haya items en el carrito
             if (cartItems.length === 0) {
                 showToast('Tu carrito está vacío');
                 return;
             }
             
-            // Mostrar mensaje de redirección
             showToast('Te redirigiremos al área de pago...');
             
-            // NO LIMPIAR EL CARRITO - Los productos se mantienen
-            // Solo cerrar la ventana del carrito después de 1.5 segundos
             setTimeout(function() {
                 const cartSidebar = document.getElementById('cart-sidebar');
                 if (cartSidebar) {
