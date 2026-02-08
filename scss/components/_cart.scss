@@ -1,12 +1,77 @@
 // ============================================================
-// CARRITO LATERAL
+// BOTÓN FLOTANTE DEL CARRITO
+// ============================================================
+
+.cart-float {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: $accent-color;
+  color: $white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  @include flex-center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  @include smooth-transition(all, 0.3s);
+
+  &:hover {
+    background: darken($accent-color, 10%);
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    transform: scale(1.05);
+  }
+
+  @include respond-to('mobile') {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+// Contador de items en el botón flotante
+.cart-float #cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #e74c3c;
+  color: $white;
+  font-size: 0.75rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  @include flex-center;
+  font-weight: bold;
+  border: 2px solid $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  @include respond-to('mobile') {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+    top: -3px;
+    right: -3px;
+  }
+}
+
+// ============================================================
+// CARRITO LATERAL (MÁS DELGADO)
 // ============================================================
 
 .cart-sidebar {
   position: fixed;
-  right: -400px;
+  right: -320px;
   top: 0;
-  width: 400px;
+  width: 320px;
   height: 100vh;
   background: $white;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
@@ -24,6 +89,27 @@
     margin-bottom: 20px;
     margin-top: 0;
     color: $primary-color;
+  }
+}
+
+.close-cart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: $primary-color;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  @include flex-center;
+  @include smooth-transition(all, 0.3s);
+
+  &:hover {
+    background: #f0f0f0;
+    color: $accent-color;
   }
 }
 
@@ -96,7 +182,33 @@
   text-align: right;
 }
 
+.btn-checkout {
+  width: 100%;
+  padding: 15px;
+  background: $accent-color;
+  color: $white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  @include smooth-transition(all, 0.3s);
+
+  &:hover {
+    background: darken($accent-color, 10%);
+    transform: translateY(-2px);
+  }
+}
+
 @include respond-to('tablet') {
+  .cart-sidebar {
+    width: 280px;
+    right: -280px;
+  }
+}
+
+@include respond-to('mobile') {
   .cart-sidebar {
     width: 100%;
     right: -100%;
