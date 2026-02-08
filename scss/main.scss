@@ -37,8 +37,14 @@ html {
 }
 
 // Asegurar que los elementos tengan altura mínima
+// Padding-top para compensar top-bar (42px) + navbar fijo
 main {
   min-height: calc(100vh - 200px);
+  padding-top: 140px;
+
+  @include respond-to('mobile') {
+    padding-top: 130px;
+  }
 }
 
 // Mejorar la accesibilidad
@@ -57,5 +63,14 @@ input, textarea, select {
 
   &:focus {
     border-color: $accent-color;
+  }
+}
+
+// Compensar header fijo en secciones con anchor links
+section[id] {
+  scroll-margin-top: 90px;
+
+  @include respond-to('mobile') {
+    scroll-margin-top: 85px;
   }
 }
