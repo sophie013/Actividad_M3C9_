@@ -1,295 +1,379 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Lover - Insumos Veterinarios y Accesorios 🐾</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Lover - Insumos Veterinarios y Accesorios 🐾</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
+  <!-- HEADER: Top Bar + Navbar -->
+  <header>
     <div class="top-bar">
-        <span class="marquee-text">¡Envíos gratis por compras sobre $30.000! 🐾</span>
+      <span class="marquee-text">¡Envíos gratis por compras sobre $30.000! 🐾</span>
     </div>
-     
+    
     <nav class="navbar">
-        <div class="logo">PetLover 🐾 </div>
-        <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-         <li><a href="#productos" class="btn-main">Ver Catálogo</a></li>
-
-        </ul>
-        
-        <div class="cart-icon" onclick="toggleCart()">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count">0</span>
-        </div>
+      <div class="logo">PetLover 🐾</div>
+      <ul class="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#productos" class="btn-main">Ver Catálogo</a></li>
+      </ul>
+      <div class="cart-icon" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </div>
     </nav>
+  </header>
 
-    <section class="hero">
+  <!-- MAIN: Contenido principal -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Bienvenida">
       <div class="hero-content">
         <h1>pet lover 🐾</h1>
-        <p>Insumos para tu mascota de la más alta calidad </p>
-        
+        <p>Insumos para tu mascota de la más alta calidad</p>
       </div>
     </section>
 
-    <section id="productos" class="products-section">
-        <h2>Nuestros Productos más buscados</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="carousel">
-                    <img src="https://www.amigales.cl/media/catalog/product/cache/629713204090c0e7213f3f646f843e1a/b/r/bravery_dog_senior_2.jpg" alt="Alimento Premium Perro">
-                </div>
-                <h3>Alimento Premium Perro Bravery 4kg</h3>
-                <p class="price">$25.990</p>
-                <button class="add-to-cart" onclick="addToCart('Alimento Premium', 25990)">Agregar al carro</button>
-            </div>
-            <div class="product-card">
-                <div class="carousel">
-                    <img src="https://dojiw2m9tvv09.cloudfront.net/30336/product/X_simparica-trio-5-a-10-kg-1-comp-para-perros9648.jpg?105&t=1769622375" alt="Antiparasitario">
-                </div>
-                <h3>Antiparasitario SIMPARICA TRÍO - 5 A 10 KG</h3>
-                <p class="price">$12.500</p>
-                <button class="add-to-cart" onclick="addToCart('Antiparasitario', 12500)">Agregar al carro</button>
-            </div>
-            <div class="product-card">
-                <div class="carousel">
-                    <img src="https://cdnx.jumpseller.com/cody-store/image/26946821/resize/640/500?1662654305" alt="Collar Reflectivo">
-                </div>
-                <h3>Collar reflectivo led Carga Usb universal</h3>
-                <p class="price">$8.990</p>
-                <button class="add-to-cart" onclick="addToCart('Collar Reflectivo', 8990)">Agregar al carro</button>
-            </div>
-            <div class="product-card">
-                <div class="carousel">
-                    <img src="https://www.amigales.cl/media/catalog/product/cache/5a453bbcf6069c8289aeb5e805e7ef39/d/o/dog_brick_1.jpg" alt="Juguete Interactivo">
-                </div>
-                <h3>Juguete Interactivo Dog Brick</h3>
-                <p class="price">$10.500</p>
-                <button class="add-to-cart" onclick="addToCart('Juguete Interactivo', 10500)">Agregar al carro</button>
-            </div>
-        </div>
+    <!-- Productos Principales -->
+    <section id="productos" class="products-section" aria-label="Productos principales">
+      <h2>Nuestros Productos más buscados</h2>
+      <div class="product-grid">
 
+        <article class="product-card">
+          <div class="carousel">
+            <img src="https://www.amigales.cl/media/catalog/product/cache/629713204090c0e7213f3f646f843e1a/b/r/bravery_dog_senior_2.jpg" alt="Alimento Premium Perro">
+          </div>
+          <h3>Alimento Premium Perro Bravery 4kg</h3>
+          <p class="price">$25.990</p>
+          <button class="add-to-cart" onclick="addToCart('Alimento Premium', 25990)">Agregar al carro</button>
+        </article>
 
-        <section class="pet-products">
-    <h2>Accesorios para tu mascota</h2>
+        <article class="product-card">
+          <div class="carousel">
+            <img src="https://dojiw2m9tvv09.cloudfront.net/30336/product/X_simparica-trio-5-a-10-kg-1-comp-para-perros9648.jpg?105&t=1769622375" alt="Antiparasitario">
+          </div>
+          <h3>Antiparasitario SIMPARICA TRÍO - 5 A 10 KG</h3>
+          <p class="price">$12.500</p>
+          <button class="add-to-cart" onclick="addToCart('Antiparasitario', 12500)">Agregar al carro</button>
+        </article>
 
-    <div class="pet-product-grid">
+        <article class="product-card">
+          <div class="carousel">
+            <img src="https://cdnx.jumpseller.com/cody-store/image/26946821/resize/640/500?1662654305" alt="Collar Reflectivo">
+          </div>
+          <h3>Collar reflectivo led Carga Usb universal</h3>
+          <p class="price">$8.990</p>
+          <button class="add-to-cart" onclick="addToCart('Collar Reflectivo', 8990)">Agregar al carro</button>
+        </article>
 
-        <div class="pet-card">
+        <article class="product-card">
+          <div class="carousel">
+            <img src="https://www.amigales.cl/media/catalog/product/cache/5a453bbcf6069c8289aeb5e805e7ef39/d/o/dog_brick_1.jpg" alt="Juguete Interactivo">
+          </div>
+          <h3>Juguete Interactivo Dog Brick</h3>
+          <p class="price">$10.500</p>
+          <button class="add-to-cart" onclick="addToCart('Juguete Interactivo', 10500)">Agregar al carro</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Accesorios -->
+    <section class="pet-products" aria-label="Accesorios para mascotas">
+      <h2>Accesorios para tu mascota</h2>
+      <div class="pet-product-grid">
+
+        <article class="pet-card category-bed">
+          <div class="image-container">
             <img src="https://compralotodo.cl/wp-content/uploads/2025/12/D_794861-MLC100479918544_122025-F.jpg" alt="Cama para mascotas">
+          </div>
+          <div class="card-content">
             <h3>Cama acolchada premium</h3>
             <p>Suave, cómoda y lavable</p>
             <span class="pet-price">$22.990</span>
-            <button class="btn-add-cart"
-                onclick="addToCart('Cama acolchada premium', 22990)">
-                Agregar al carrito 
-            </button>
-        </div>
+            <button class="btn-add-cart" onclick="addToCart('Cama acolchada premium', 22990)">Agregar al carrito</button>
+          </div>
+        </article>
 
-        <div class="pet-card">
+        <article class="pet-card category-toy">
+          <div class="image-container">
             <img src="https://www.aon.es/personales/seguro-perro-gato/wp-content/uploads/sites/2/2023/04/cachorro-dachshund-juguete-aislado-1-scaled.jpg" alt="Juguete para perros">
+          </div>
+          <div class="card-content">
             <h3>Juguetes interactivos</h3>
             <p>Estimula y entretiene</p>
             <span class="pet-price">$5.990</span>
-            <button class="btn-add-cart"
-                onclick="addToCart('Juguetes interactivos', 5990)">
-                Agregar al carrito 
-            </button>
-        </div>
+            <button class="btn-add-cart" onclick="addToCart('Juguetes interactivos', 5990)">Agregar al carrito</button>
+          </div>
+        </article>
 
-        <div class="pet-card">
+        <article class="pet-card category-clothes">
+          <div class="image-container">
             <img src="https://i.pinimg.com/736x/ba/5a/24/ba5a241651a6cda74509ca0cc9a6df4e.jpg" alt="Ropa para mascotas">
+          </div>
+          <div class="card-content">
             <h3>Ropa térmica invierno</h3>
             <p>Abriga con estilo</p>
             <span class="pet-price">$12.490</span>
-            <button class="btn-add-cart"
-                onclick="addToCart('Ropa térmica invierno', 12490)">
-                Agregar al carrito 
-            </button>
-        </div>
+            <button class="btn-add-cart" onclick="addToCart('Ropa térmica invierno', 12490)">Agregar al carrito</button>
+          </div>
+        </article>
 
-        <div class="pet-card">
+        <article class="pet-card category-food">
+          <div class="image-container">
             <img src="https://rimage.ripley.cl/home.ripley/Attachment/MKP/5629/MPM10001128469/full_image-1.png" alt="Plato para mascotas">
+          </div>
+          <div class="card-content">
             <h3>Plato antideslizante</h3>
             <p>Ideal para comida y agua</p>
             <span class="pet-price">$6.990</span>
-            <button class="btn-add-cart"
-                onclick="addToCart('Plato antideslizante', 6990)">
-                Agregar al carrito 
-            </button>
-        </div>
+            <button class="btn-add-cart" onclick="addToCart('Plato antideslizante', 6990)">Agregar al carrito</button>
+          </div>
+        </article>
 
-        <div class="pet-card">
+        <article class="pet-card category-food">
+          <div class="image-container">
             <img src="https://www.winga.cl/cdn/shop/files/IMG_4314_0b7f4d4b-87c6-468c-b413-5c2cd1c63122_1024x1024.jpg?v=1731104432" alt="alimento snack">
-            <h3>alimento snack</h3>
-            <p>Ideal para viajes </p>
+          </div>
+          <div class="card-content">
+            <h3>Alimento snack</h3>
+            <p>Ideal para viajes</p>
             <span class="pet-price">$3.990</span>
-            <button class="btn-add-cart"
-                onclick="addToCart('alimento snack', 3990)">
-                Agregar al carrito 
-            </button>
-        </div>
+            <button class="btn-add-cart" onclick="addToCart('alimento snack', 3990)">Agregar al carrito</button>
+          </div>
+        </article>
 
-           <div class="pet-card">
+        <article class="pet-card category-toy">
+          <div class="image-container">
             <img src="https://www.befoods.cl/cdn/shop/products/befoods-2074.jpg?v=1753706808&width=1000" alt="columpio de aves">
-            <h3>columpio para aves </h3>
-            <p>diversión ideal </p>
-            <span class="pet-price">$1000</span>
-            <button class="btn-add-cart"
-                onclick="addToCart('columpio para aves ', 1000)">
-                Agregar al carrito 
-            </button>
-        </div>
-         <div class="pet-card">
+          </div>
+          <div class="card-content">
+            <h3>Columpio para aves</h3>
+            <p>Diversión ideal</p>
+            <span class="pet-price">$1.000</span>
+            <button class="btn-add-cart" onclick="addToCart('columpio para aves', 1000)">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="pet-card category-bed">
+          <div class="image-container">
             <img src="https://www.superzoo.cl/on/demandware.static/-/Sites-SuperZoo-master-catalog/default/dwd3a85140/images/sku15391_1.jpg" alt="set de baño">
-            <h3>set de baño </h3>
-            <p> uso pieles sensibles  </p>
+          </div>
+          <div class="card-content">
+            <h3>Set de baño</h3>
+            <p>Uso pieles sensibles</p>
             <span class="pet-price">$16.000</span>
-            <button class="btn-add-cart"
-                onclick="addToCart('set de baño  ', 16000)">
-                Agregar al carrito 
-            </button>
-        </div>
-         <div class="pet-card">
-            <img src="https://www.superzoo.cl/on/demandware.static/-/Sites-SuperZoo-master-catalog/default/dweb0fd0aa/images/57eee-transitdogcarrier-l_10201699_0000_2.jpg" alt="columpio de aves">
-            <h3>transportadora  </h3>
-            <p> talla L </p>
+            <button class="btn-add-cart" onclick="addToCart('set de baño', 16000)">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="pet-card category-bed">
+          <div class="image-container">
+            <img src="https://www.superzoo.cl/on/demandware.static/-/Sites-SuperZoo-master-catalog/default/dweb0fd0aa/images/57eee-transitdogcarrier-l_10201699_0000_2.jpg" alt="transportadora">
+          </div>
+          <div class="card-content">
+            <h3>Transportadora</h3>
+            <p>Talla L - Viajes seguros</p>
             <span class="pet-price">$60.000</span>
-            <button class="btn-add-cart"
-                onclick="addToCart('columpio para aves ', 60000)">
-                Agregar al carrito 
-            </button>
-        </div>
+            <button class="btn-add-cart" onclick="addToCart('transportadora', 60000)">Agregar al carrito</button>
+          </div>
+        </article>
 
-    </div>
-</section>
-
-
-
-<!-- TOAST -->
-<div id="toast" class="toast"></div>
-
-    <div id="cart-sidebar" class="cart-sidebar">
-        <button class="close-cart" onclick="toggleCart()">
-            <i class="fas fa-times"></i>
-        </button>
-        <h2>Tu Carrito</h2>
-        <div id="cart-items">
-            </div>
-        <div class="cart-total">
-            <strong>Total: $<span id="cart-total">0</span></strong>
-        </div>
-        <button id="btn-checkout" class="btn-checkout">Finalizar Compra</button>
-    </div>
-
-    <a href="https://wa.me/123456789" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <section class="testimonios">
-        <h2>Lo que dicen nuestros clientes peludos </h2>
-        <div class="testimonio-grid">
-            <div class="testimonio-card">
-                <p>"La mejor atención para mi perrito, los productos llegaron muy rápido."</p>
-                <span class="user-name">- Juan Pérez</span>
-            </div>
-            <div class="testimonio-card">
-                <p>"Excelente calidad en el alimento Bravery, 100% recomendado."</p>
-                <span class="user-name">- María G.</span>
-            </div>
-               <div class="testimonio-card">
-                <p>" no me gusto el tamaño de la cama para mi gato ,pero si la calidad de textura." </p>
-                <span class="user-name">- karen saa</span>
-            </div>
-            
-
-        </div>
+      </div>
     </section>
 
-    <section id="contacto" class="contacto-section">
-        <h2 style="text-align: center; margin-bottom: 30px;"> 🐾sigamos en contacto 🐶  envianos un mensaje🐾 </h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Tu Nombre" required>
-            <input type="email" placeholder="Tu Correo" required>
-            <textarea rows="5" placeholder="¿En qué podemos ayudarte?"></textarea>
-            <button type="submit" class="btn-submit">Enviar Mensaje</button>
-        </form>
+    <!-- Testimonios -->
+    <section class="testimonios" aria-label="Testimonios de clientes">
+      <h2>Lo que dicen nuestros clientes peludos</h2>
+      <div class="testimonio-wrapper">
+        <div class="testimonio-track">
+          <!-- Primer set de testimonios -->
+          <blockquote class="testimonio-card">
+            <p>"La mejor atención para mi perrito, los productos llegaron muy rápido."</p>
+            <cite class="user-name">- Juan Pérez</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"Excelente calidad en el alimento Bravery, 100% recomendado."</p>
+            <cite class="user-name">- María G.</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"No me gusto el tamaño de la cama para mi gato, pero si la calidad de textura."</p>
+            <cite class="user-name">- Karen Saa</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"El collar reflectivo es genial, mi mascota se ve increíble en las noches."</p>
+            <cite class="user-name">- Carlos Mendoza</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"Los juguetes interactivos mantienen a mi perro ocupado por horas. ¡Excelente!"</p>
+            <cite class="user-name">- Ana Lucía</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"La transportadora es súper práctica y resistente. Viajar con mi mascota ahora es fácil."</p>
+            <cite class="user-name">- Roberto Vega</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"El set de baño es perfecto para mi perrita de piel sensible. ¡Gracias Pet Lover!"</p>
+            <cite class="user-name">- Daniela Torres</cite>
+          </blockquote>
+
+          <!-- Duplicados para loop infinito -->
+          <blockquote class="testimonio-card">
+            <p>"La mejor atención para mi perrito, los productos llegaron muy rápido."</p>
+            <cite class="user-name">- Juan Pérez</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"Excelente calidad en el alimento Bravery, 100% recomendado."</p>
+            <cite class="user-name">- María G.</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"No me gusto el tamaño de la cama para mi gato, pero si la calidad de textura."</p>
+            <cite class="user-name">- Karen Saa</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"El collar reflectivo es genial, mi mascota se ve increíble en las noches."</p>
+            <cite class="user-name">- Carlos Mendoza</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"Los juguetes interactivos mantienen a mi perro ocupado por horas. ¡Excelente!"</p>
+            <cite class="user-name">- Ana Lucía</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"La transportadora es súper práctica y resistente. Viajar con mi mascota ahora es fácil."</p>
+            <cite class="user-name">- Roberto Vega</cite>
+          </blockquote>
+
+          <blockquote class="testimonio-card">
+            <p>"El set de baño es perfecto para mi perrita de piel sensible. ¡Gracias Pet Lover!"</p>
+            <cite class="user-name">- Daniela Torres</cite>
+          </blockquote>
+        </div>
+      </div>
     </section>
 
-    <section id="nosotros" class="about-section">
-    <div class="about-container">
-        
+    <!-- Contacto -->
+    <section id="contacto" class="contacto-section" aria-label="Formulario de contacto">
+      <h2 class="section-title">🐾 Sigamos en contacto 🐶 Envíanos un mensaje 🐾</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Tu Nombre" required>
+        <input type="email" placeholder="Tu Correo" required>
+        <textarea rows="5" placeholder="¿En qué podemos ayudarte?"></textarea>
+        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+      </form>
+    </section>
+
+    <!-- Nosotros / Historia -->
+    <section id="nosotros" class="about-section" aria-label="Nuestra historia">
+      <div class="about-container">
         <div class="about-image">
-            <img src="https://i.pinimg.com/1200x/29/9d/9b/299d9bc77cd655aa810bdd9213ccf2b0.jpg" alt="Nuestra Historia Pet Lover">
+          <img src="https://i.pinimg.com/1200x/29/9d/9b/299d9bc77cd655aa810bdd9213ccf2b0.jpg" alt="Nuestra Historia Pet Lover">
         </div>
-
         <div class="about-content">
-            <span class="subtitle">Desde 2015</span>
-            <h2>Nuestra Historia 🐾</h2>
-            <p>
-                Pet Lover nació de un sueño familiar: crear un espacio donde cada mascota sea tratada con la dignidad y el amor que merece. Lo que comenzó como un pequeño emprendimiento local, hoy es una comunidad de amantes de los animales.
-            </p>
-            <p>
-                Nos especializamos en seleccionar productos de alta calidad, desde alimentos premium hasta accesorios que realmente marcan la diferencia en la vida de tus compañeros peludos.
-            </p>
-
-            <div class="about-features">
-                <div class="feature-item">
-                    <i class="fas fa-heart"></i>
-                    <div>
-                        <strong>+8 años</strong>
-                        <span>De experiencia</span>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-star"></i>
-                    <div>
-                        <strong>5000+</strong>
-                        <span>Clientes felices</span>
-                    </div>
-                </div>
+          <span class="subtitle">Desde 2015</span>
+          <h2>Nuestra Historia 🐾</h2>
+          <p>
+            Pet Lover nació de un sueño familiar: crear un espacio donde cada mascota sea tratada con la dignidad y el amor que merece. Lo que comenzó como un pequeño emprendimiento local, hoy es una comunidad de amantes de los animales.
+          </p>
+          <p>
+            Nos especializamos en seleccionar productos de alta calidad, desde alimentos premium hasta accesorios que realmente marcan la diferencia en la vida de tus compañeros peludos.
+          </p>
+          <div class="about-features">
+            <div class="feature-item">
+              <i class="fas fa-heart"></i>
+              <div>
+                <strong>+8 años</strong>
+                <span>De experiencia</span>
+              </div>
             </div>
+            <div class="feature-item">
+              <i class="fas fa-star"></i>
+              <div>
+                <strong>5000+</strong>
+                <span>Clientes felices</span>
+              </div>
+            </div>
+          </div>
         </div>
-        
-    </div>
-</section>
+      </div>
+    </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="info">
-                <h4>Dirección</h4>
-                <p>Av. Ratón Pérez 323., Zootopia</p>
-                <h4>Horarios</h4>
-                <p>Lun - Vie: 09:00 - 19:00</p>
-            </div>
-            <div class="socials">
-                <h4>Síguenos</h4>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-           <div class="map-container">
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="info">
+        <h4>Dirección</h4>
+        <p>Av. Ratón Pérez 323., Zootopia</p>
+        <h4>Horarios</h4>
+        <p>Lun - Vie: 09:00 - 19:00</p>
+      </div>
+      <div class="socials">
+        <h4>Síguenos</h4>
+        <a href="#" aria-label="Síguenos en Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="map-container">
         <iframe
-        src="https://www.google.com/maps?q=Ñuñoa,+Santiago,+Chile&output=embed"
-        width="100%"
-        height="350"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
-        <button id="back-to-top" onclick="scrollToTop()">
-            <i class="fas fa-arrow-up"></i>
-        </button>
-    </footer>
+          title="Ubicación de Pet Lover en Google Maps"
+          src="https://www.google.com/maps?q=Ñuñoa,+Santiago,+Chile&output=embed"
+          width="100%"
+          height="350"
+          style="border:0;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+    <button id="back-to-top" onclick="scrollToTop()" aria-label="Volver al inicio">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </footer>
 
-    <div id="toast" class="toast">¡Producto añadido!</div>
+  <!-- ELEMENTOS FLOTANTES Y MODALES (fuera del flujo normal) -->
+  
+  <!-- Carrito lateral -->
+  <aside id="cart-sidebar" class="cart-sidebar" aria-label="Carrito de compras">
+    <button class="close-cart" onclick="toggleCart()" aria-label="Cerrar carrito">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2>Tu Carrito</h2>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+      <strong>Total: $<span id="cart-total">0</span></strong>
+    </div>
+    <button id="btn-checkout" class="btn-checkout">Finalizar Compra</button>
+  </aside>
 
-    <script src="assets/js/script.js"></script>
+  <!-- WhatsApp Float -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/123456789" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactanos por WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite">¡Producto añadido!</div>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
