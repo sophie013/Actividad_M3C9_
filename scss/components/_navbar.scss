@@ -1,5 +1,5 @@
 // ============================================================
-// NAVBAR / NAVEGACIÓN
+// NAVBAR / NAVEGACIÓN STICKY (DEBAJO DEL TOP BAR)
 // ============================================================
 
 .navbar {
@@ -8,10 +8,21 @@
   align-items: center;
   padding: 1rem 5%;
   background: rgba($white, 0.98);
-  position: sticky;
-  top: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  top: 42px;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  box-shadow: $shadow-light;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  @include smooth-transition(all, 0.3s);
+
+  &.scrolled {
+    padding: 0.7rem 5%;
+    background: rgba($white, 0.99);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .logo {
@@ -36,28 +47,4 @@
   }
 }
 
-.cart-icon {
-  position: relative;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: $primary-color;
-  @include smooth-transition(color);
 
-  &:hover {
-    color: $accent-color;
-  }
-}
-
-#cart-count {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: $accent-color;
-  color: $white;
-  font-size: 0.8rem;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  @include flex-center;
-  font-weight: bold;
-}

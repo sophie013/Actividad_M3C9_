@@ -115,3 +115,206 @@
     }
   }
 }
+
+// ============================================================
+// SECCIÓN ACCESORIOS (PET PRODUCTS)
+// ============================================================
+
+.pet-products {
+  padding: 80px 5%;
+  background: linear-gradient(135deg, #f5fbf9 0%, #e8f5f0 100%);
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: $primary-color;
+    position: relative;
+
+    &::after {
+      content: '🐾';
+      display: block;
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    @include respond-to('tablet') {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.pet-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @include respond-to('tablet') {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  @include respond-to('mobile') {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.pet-card {
+  background: $white;
+  border-radius: 20px;
+  padding: 0;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  @include smooth-transition(all);
+  position: relative;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
+    img {
+      transform: scale(1.08);
+    }
+  }
+
+  @include respond-to('mobile') {
+    border-radius: 15px;
+  }
+
+  // Contenedor de imagen
+  .image-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e8eef3 100%);
+
+    @include respond-to('mobile') {
+      height: 180px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include smooth-transition(transform);
+    }
+
+    // Badge de "Nuevo" o "Oferta" (opcional)
+    .badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: $accent-color;
+      color: $white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  // Contenido de la card
+  .card-content {
+    padding: 25px 20px;
+
+    h3 {
+      font-size: 1.2rem;
+      color: $primary-color;
+      margin-bottom: 8px;
+      font-weight: 700;
+      line-height: 1.3;
+
+      @include respond-to('mobile') {
+        font-size: 1.1rem;
+      }
+    }
+
+    p {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .pet-price {
+      font-size: 1.6rem;
+      color: $accent-color;
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: block;
+
+      @include respond-to('mobile') {
+        font-size: 1.4rem;
+      }
+
+      &::before {
+        content: '';
+      }
+    }
+
+    .btn-add-cart {
+      width: 100%;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, #93c6b8 0%, #7fb4a5 100%);
+      color: $white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      @include smooth-transition(all);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      &::before {
+        content: '+';
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      &:hover {
+        background: linear-gradient(135deg, #7fb4a5 0%, #6ba392 100%);
+        transform: scale(1.02);
+        box-shadow: 0 4px 15px rgba(147, 198, 184, 0.4);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  // Variantes de colores para diferentes categorías
+  &.category-bed {
+    .image-container {
+      background: linear-gradient(135deg, #fff5f0 0%, #ffe8e0 100%);
+    }
+  }
+
+  &.category-toy {
+    .image-container {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f4ff 100%);
+    }
+  }
+
+  &.category-clothes {
+    .image-container {
+      background: linear-gradient(135deg, #f5f0ff 0%, #efe0ff 100%);
+    }
+  }
+
+  &.category-food {
+    .image-container {
+      background: linear-gradient(135deg, #f0fff4 0%, #e0ffea 100%);
+    }
+  }
+}

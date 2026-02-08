@@ -7,7 +7,7 @@ let cartTotal = 0;
 
 /* =========================
    ABRIR / CERRAR CARRITO
-========================= */
+ ========================= */
 function toggleCart() {
     const sidebar = document.getElementById('cart-sidebar');
     if (!sidebar) return;
@@ -103,21 +103,7 @@ function showToast(message) {
     }, 3000);
 }
 
-/* =========================
-   CERRAR AL CLIC FUERA
-========================= */
-document.addEventListener('click', (e) => {
-    const sidebar = document.getElementById('cart-sidebar');
-    const cartIcon = document.querySelector('.cart-icon');
 
-    if (!sidebar || !cartIcon) return;
-
-    if (sidebar.classList.contains('active')) {
-        if (!sidebar.contains(e.target) && !cartIcon.contains(e.target)) {
-            sidebar.classList.remove('active');
-        }
-    }
-});
 /* =========================
    FINALIZAR COMPRA
 ========================= */
@@ -177,7 +163,7 @@ function scrollToTop() {
 
 /* =====================
    TOAST GLOBAL
-===================== */
+ ===================== */
 function showToast(message) {
     const toast = document.getElementById("toast");
     if (!toast) return;
@@ -189,5 +175,21 @@ function showToast(message) {
         toast.classList.remove("show");
     }, 3000);
 }
+
+/* =====================
+   NAVBAR STICKY CON EFECTO SCROLL
+ ===================== */
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+});
 
 
